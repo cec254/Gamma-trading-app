@@ -1,7 +1,11 @@
+# Fix matplotlib backend for Streamlit Cloud
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend
+import matplotlib.pyplot as plt
+
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import norm
 import requests
@@ -13,6 +17,8 @@ import time
 from datetime import datetime, timedelta
 import logging
 import os  # For environment variables
+
+# ... rest of your code remains the same ...
 
 # ========================
 # 1. Security and Authentication
